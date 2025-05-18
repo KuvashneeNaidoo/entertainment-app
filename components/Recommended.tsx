@@ -20,7 +20,13 @@ const Recommended = () => {
         {recommended.map((item) => (
           <ContentCard
             key={item.title}
-            {...item}
+            title={item.title}
+            thumbnail={item.thumbnail}
+            year={item.year}
+            category={item.category}
+            rating={item.rating}
+            isBookmarked={item.isBookmarked}
+            isTrending={item.isTrending}
             onBookmarkToggle={() => toggleBookmark(item.title)}
           />
         ))}

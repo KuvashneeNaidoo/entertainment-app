@@ -19,8 +19,14 @@ const Bookmarks = () => {
       <ContentContainer>
         {bookmarkedMovies.map((movie) => (
           <ContentCard
-            {...movie}
             key={movie.title}
+            title={movie.title}
+            thumbnail={movie.thumbnail}
+            year={movie.year}
+            category={movie.category}
+            rating={movie.rating}
+            isBookmarked={movie.isBookmarked}
+            isTrending={movie.isTrending}
             onBookmarkToggle={() => toggleBookmark(movie.title)}
           />
         ))}
@@ -30,8 +36,14 @@ const Bookmarks = () => {
       <ContentContainer>
         {bookmarkedShows.map((show) => (
           <ContentCard
-            {...show}
             key={show.title}
+            title={show.title}
+            thumbnail={show.thumbnail}
+            year={show.year}
+            category={show.category}
+            rating={show.rating}
+            isBookmarked={show.isBookmarked}
+            isTrending={show.isTrending}
             onBookmarkToggle={() => toggleBookmark(show.title)}
           />
         ))}

@@ -20,7 +20,13 @@ const Trending = () => {
         {trending.map((item) => (
           <ContentCard
             key={item.title}
-            {...item}
+            title={item.title}
+            thumbnail={item.thumbnail}
+            year={item.year}
+            category={item.category}
+            rating={item.rating}
+            isBookmarked={item.isBookmarked}
+            isTrending={item.isTrending}
             useIsTrending={true}
             onBookmarkToggle={() => toggleBookmark(item.title)}
           />
