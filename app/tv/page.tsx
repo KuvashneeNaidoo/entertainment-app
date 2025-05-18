@@ -17,8 +17,14 @@ const TV = () => {
       <ContentContainer>
         {shows.map((show) => (
           <ContentCard
-            {...show}
             key={show.title}
+            title={show.title}
+            thumbnail={show.thumbnail}
+            year={show.year}
+            category={show.category}
+            rating={show.rating}
+            isBookmarked={show.isBookmarked}
+            isTrending={show.isTrending}
             onBookmarkToggle={() => toggleBookmark(show.title)}
           />
         ))}
