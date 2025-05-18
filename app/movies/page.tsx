@@ -17,8 +17,14 @@ const Movies = () => {
       <ContentContainer>
         {movies.map((movie) => (
           <ContentCard
-            {...movie}
             key={movie.title}
+            title={movie.title}
+            thumbnail={movie.thumbnail}
+            year={movie.year}
+            category={movie.category}
+            rating={movie.rating}
+            isBookmarked={movie.isBookmarked}
+            isTrending={movie.isTrending}
             onBookmarkToggle={() => toggleBookmark(movie.title)}
           />
         ))}
